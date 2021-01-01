@@ -1,9 +1,19 @@
 class UsersController < ApplicationController
     def index
-        debugger
+        # debugger
         # params[:id]???? => answer: nope
         users = User.all
         render json: users
+    end
+
+    def new
+        @user = User.new
+        render :new
+    end
+
+    def edit
+        @user = User.find_by(id: params[:id])
+        render :edit
     end
 
     def show

@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   # post '/users', create
   # patch '/users/:id', update
   # delete '/users/:id', destroy
-  # resources :users
+  resources :users
   # resources :users, only: [:index, :create, :update, :destroy, :show]
-  resources :users, except: [:edit, :new]
+  # resources :users, except: [:edit, :new]
 end

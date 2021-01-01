@@ -1,0 +1,13 @@
+<form action=<%= user_url(@user) %> method="POST">
+    <input type="hidden" name="_method" value="PATCH">
+    <label>Username:
+        <input type="text" name="user[username]" value=<%= @user.username %>>
+    </label>
+    <label>Email:
+        <input type="text" name="user[email]" value=<%= @user.email %>>
+    </label>
+    <label>Age:
+        <input type="text" name="user[age]" value=<%= @user.age %>>
+    </label>
+    <input type="submit" value="Update User">
+</form>
