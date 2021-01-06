@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+    # before_action :require_logged_in, only: [:index, :show, :edit, :update, :destroy]
+    before_action :require_logged_in, except: [:new, :create]
+
     def index
         # debugger
         # params[:id]???? => answer: nope
