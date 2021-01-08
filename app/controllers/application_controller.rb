@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-
+    helper_method :current_user, :logged_in?
     # C - current_user
     # R - require_logged_in
     # L - login
