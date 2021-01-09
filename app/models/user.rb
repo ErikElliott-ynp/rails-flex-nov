@@ -10,6 +10,10 @@ class User < ApplicationRecord
     # before_validation :ensure_session_token
     # set the session_token using the ensure_session_token method
 
+    has_many :chirps
+        foreign_key: :user_id,
+        class_name: :Chirp
+
     # S - self.find_by_credentials
     # P - password=
     # I - is_password?

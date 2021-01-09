@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   # resources :users, only: [:index, :create, :update, :destroy, :show]
   # resources :users, except: [:edit, :new]
   resource :session, only: [:new, :create, :destroy]
+  resources :chirps
+  
 end
